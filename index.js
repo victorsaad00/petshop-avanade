@@ -80,25 +80,18 @@ function adicionarCliente(nome,tipo,idade,raca,peso,tutor,contato,vacinados) {
 }
 
 const darBanhoPet = (pet) => {
-    if(!pet.servicos.includes('Banho')){
-        pet.servicos.push('Banho');
-        console.log(`${pet.nome} está de banho tomado!`);
-    }
+    pet.servicos.push('Banho' + moment().format());
+    console.log(`${pet.nome} está de banho tomado!`);
 }
 
 const tosarPet = (pet) => {
-    if(!pet.servicos.includes('Tosa')){
-        pet.servicos.push('Tosa');
-        console.log(`${pet.nome} está com cabelinho na régua`);
-    }
+    pet.servicos.push('Tosa' + moment().format());
+    console.log(`${pet.nome} está com cabelinho na régua`);
 }
 
 const apararUnhasPet = (pet) => { 
-    if(!pet.servicos.includes('corte de unhas' )){
-        pet.servicos.push('corte de unhas');
-        console.log(`${pet.nome} está de unhas aparadas!`);
-    } else
-        console.log(`${pet.nome} já está de unhas aparadas!`);
+    pet.servicos.push('corte de unhas' + moment().format());
+    console.log(`${pet.nome} está de unhas aparadas!`);
 }
 
 apararUnhasPet(pets[0])
