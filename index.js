@@ -61,4 +61,21 @@ function campanhaVacina(pets) {
     console.log(`${petsVacinados} vacinados!`);
 }
 
-campanhaVacina(pets);
+function adicionarCliente(nome,tipo,idade,raca,peso,tutor,contato,vacinados) {
+    newPet = {
+        nome: nome,
+        tipo: tipo,
+        idade: idade,
+        raca: raca,
+        peso: peso,
+        tutor:tutor,
+        contato: contato,
+        vacinado: vacinados,
+        servicos: []
+    }
+
+    pets.push(newPet);
+
+}
+adicionarCliente('Dogo', '', '', '','','','','')
+console.log(pets)
