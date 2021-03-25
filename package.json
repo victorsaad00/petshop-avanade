@@ -1,0 +1,19 @@
+{
+  "name": "petshop-avanade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorsaad00/petshop-avanade.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorsaad00/petshop-avanade/issues"
+  },
+  "homepage": "https://github.com/victorsaad00/petshop-avanade#readme"
+}
