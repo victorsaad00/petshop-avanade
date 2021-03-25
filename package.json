@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/victorsaad00/petshop-avanade/issues"
   },
-  "homepage": "https://github.com/victorsaad00/petshop-avanade#readme"
+  "homepage": "https://github.com/victorsaad00/petshop-avanade#readme",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
 }
