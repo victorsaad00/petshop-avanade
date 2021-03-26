@@ -1,43 +1,9 @@
 const nomePetshop = "PETSHOP AVANADE"
 let moment = require('moment');
 
-let pets = [
-    {
-        nome:'Billy',
-        tipo:'Pug',
-        idade:'2',
-        raca:'Pug',
-        peso:2,
-        tutor:'Doug',
-        contato:'(81)998677622',
-        vacinado:false,
-        servicos:['banho','tosa']
-    },
-    {
-        nome:'Snoopy',
-        tipo:'Beagle',
-        idade:'2',
-        raca:'Beagle',
-        peso: 1.8,
-        tutor:'Doug',
-        contato:'(81)998677622',
-        vacinado:false,
-        servicos:['banho','tosa']
-    },
-    {
-        nome:'Scot',
-        tipo:'Pug',
-        idade:'2',
-        raca:'vira-late',
-        peso:'2',
-        tutor:'Doug',
-        contato:'(81)998677622',
-        vacinado:true,
-        servicos:['banho','tosa']
-    }
-]
+let pets = require('./db-pets.json');
 
-const listarPets = () => {
+const listarPets = (pets) => {
     for (let pet of pets)
         console.log(`${pet.nome} ${pet.idade} ${pet.tipo} ${pet.raca}`)
 }
