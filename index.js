@@ -12,8 +12,10 @@ const atualizarBancoDeDados = () => {
 }
 
 const listarPets = (pets) => {
-    for (let pet of pets)
+    for (let pet of pets) {
         console.log(`${pet.nome} ${pet.idade} ${pet.tipo} ${pet.raca}`)
+        pet.vacinado ? console.log(`${pet.nome} esta vacinado! `) : console.log(`${pet.nome} nao esta vacinado! `)
+    }
 }
 
 let vacinarPet = (pet) => {
@@ -51,26 +53,38 @@ function adicionarPet(pet) {
 
 const darBanhoPet = (pet) => {
     pet.servicos.push('Banho' + moment().format())
-    console.log(`${pet.nome} está de banho tomado!`)
+    console.log(`${pet.nome} está de banho tomado!`);
 }
 
 const tosarPet = (pet) => {
     pet.servicos.push('Tosa' + moment().format())
-    console.log(`${pet.nome} está com cabelinho na régua`)
+    console.log(`${pet.nome} está com cabelinho na régua`);
 }
 
 const apararUnhasPet = (pet) => { 
     pet.servicos.push('corte de unhas' + moment().format())
-    console.log(`${pet.nome} está de unhas aparadas!`)
+    console.log(`${pet.nome} está de unhas aparadas!`);
 }
+
+
+function funcaoServico(darBanhoPet, tosarPet, aparadaUnhasPet){
+    
+}
+
+function atenderClientes(pet, servico){
+    servico;
+    console.log(`Ola ${pet.nome}, vamos cuidar do seu dogo!`);
+}
+
+atenderClientes(pets[0], apararUnhasPet(pets[0]))
+
 
 // apararUnhasPet(pets[0])
 // tosarPet(pets[0])
 // darBanhoPet(pets[0])
 
-listarPets(pets)
+// listarPets(pets)
 
-let dogo = 
-{ "nome": "Nicko", "tipo": "Pug", "idade": "1", "raca": "Pug", "peso": 1.8, "tutor": "Odin", "contato": "(81)998677622", "vacinado": false}
-adicionarPet(dogo)
-listarPets(pets)
+// let dogo = { "nome": "Nicko", "tipo": "Pug", "idade": "1", "raca": "Pug", "peso": 1.8, "tutor": "Odin", "contato": "(81)998677622", "vacinado": false}
+// adicionarPet(dogo)
+// listarPets(pets)
