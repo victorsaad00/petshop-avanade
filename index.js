@@ -32,12 +32,24 @@ let vacinarPet = (pet) => {
 
 function campanhaVacina(pets) {
     let petsVacinados = 0
-    for(pet of pets) {
-        if(vacinarPet(pet))
-            petsVacinados++
+    let vacinados = pets.map(function(pet){
+        if (pet.vacinado) petsVacinados++
+    })
+
+    return petsVacinados
+}
+
+function campanhaVacina2(pets) {
+    let vacinados = pets.map(function(pet){
+        return pet.vacinado
+    })
+
+    let petsVacinados = 0
+    for(let i = 0; i < vacinados.length; i++){
+        if(vacinados[i]) petsVacinados++
     }
-    atualizarBancoDeDados()
-    console.log(`${petsVacinados} vacinados!`)
+
+    return petsVacinados
 }
 
 function adicionarPet(pet) {
@@ -53,30 +65,40 @@ function adicionarPet(pet) {
 
 const darBanhoPet = (pet) => {
     pet.servicos.push('Banho' + moment().format())
-    console.log(`${pet.nome} está de banho tomado!`);
+    console.log(`${pet.nome} está de banho tomado!`)
 }
 
 const tosarPet = (pet) => {
     pet.servicos.push('Tosa' + moment().format())
-    console.log(`${pet.nome} está com cabelinho na régua`);
+    console.log(`${pet.nome} está com cabelinho na régua`)
 }
 
 const apararUnhasPet = (pet) => { 
     pet.servicos.push('corte de unhas' + moment().format())
-    console.log(`${pet.nome} está de unhas aparadas!`);
-}
-
-
-function funcaoServico(darBanhoPet, tosarPet, aparadaUnhasPet){
-    
+    console.log(`${pet.nome} está de unhas aparadas!`)
 }
 
 function atenderClientes(pet, servico){
-    servico;
-    console.log(`Ola ${pet.nome}, vamos cuidar do seu dogo!`);
+    servico
+    console.log(`Seja bem vindo(a), ${pet.tutor}, vamos cuidar do seu dogo!`)
+    atualizarBancoDeDados()
 }
 
-atenderClientes(pets[0], apararUnhasPet(pets[0]))
+const buscarPet = (pets, pet, nome) => {
+    let fPet = pets.find((pet)=>{
+        return pet.nome === String(nome)
+    })
+    return fPet
+}
+
+const clientePremium = (pet) => {
+    let qtdAtendimentos = pet.servicos.length
+    return (qtdAtendimentos >=3) ? true : false
+}
+
+console.log(clientePremium(pets[0]))
+// console.log(buscarPet(pets, pets[0], 'Billy'))
+// atenderClientes(pets[0], apararUnhasPet(pets[0]))
 
 
 // apararUnhasPet(pets[0])

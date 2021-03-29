@@ -8,10 +8,12 @@
             "peso": 2,
             "tutor": "Doug",
             "contato": "(81)998677622",
-            "vacinado": false,
+            "vacinado": true,
             "servicos": [
                 "banho",
-                "tosa"
+                "tosa",
+                "corte de unhas2021-03-29T12:02:02-03:00",
+                "corte de unhas2021-03-29T14:45:45-03:00"
             ]
         },
         {
@@ -22,7 +24,7 @@
             "peso": 2.4,
             "tutor": "Doug",
             "contato": "(81)998677622",
-            "vacinado": false,
+            "vacinado": true,
             "servicos": [
                 "banho",
                 "tosa"
@@ -36,7 +38,7 @@
             "peso": 3,
             "tutor": "Doug",
             "contato": "(81)998677622",
-            "vacinado": true,
+            "vacinado": false,
             "servicos": [
                 "banho",
                 "tosa"
