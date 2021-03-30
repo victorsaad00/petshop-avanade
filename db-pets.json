@@ -73,7 +73,18 @@
             ]
         },
         {
-            "nome": "Thor",
+            "nome": "Cavendish",
+            "tipo": "labrathor",
+            "idade": "1",
+            "raca": "labrathor",
+            "peso": 1.8,
+            "tutor": "Odin",
+            "contato": "(81)998677622",
+            "vacinado": false,
+            "servicos": []
+        },
+        {
+            "nome": "Thors",
             "tipo": "Golden Retriver",
             "idade": "2",
             "raca": "Golden Retriver",
@@ -85,17 +96,6 @@
                 "banho",
                 "tosa"
             ]
-        },
-        {
-            "nome": "Nicko",
-            "tipo": "Pug",
-            "idade": "1",
-            "raca": "Pug",
-            "peso": 1.8,
-            "tutor": "Odin",
-            "contato": "(81)998677622",
-            "vacinado": false,
-            "servicos": []
         }
     ]
 }

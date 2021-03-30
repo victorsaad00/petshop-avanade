@@ -11,20 +11,12 @@ const atualizarBancoDeDados = () => {
     fs.writeFileSync('db-pets.json', petsAtualizado, 'utf-8')
 }
 
-// const listarPets = (pets) => {
-//     (pets).forEach(({nome, tipo, idade, raca}) => {
-//         console.log(`${nome} ${idade} ${tipo} ${raca}`)
-//     });
-// }
-
 const listarPets = (pets) => {
     (pets).forEach((pet) => {
         let {nome, tipo, idade, raca} = pet
         console.log(`${nome} ${idade} ${tipo} ${raca}`)
     });
 }
-
-listarPets(pets)
 
 let vacinarPet = (pet) => {
     if (!pet.vacinado) {
@@ -59,15 +51,12 @@ function campanhaVacina2(pets) {
     return petsVacinados
 }
 
-function adicionarPet(pet) {
-    if (typeof pet == 'object'){
-        if(!pet.servicos) pet.servicos = []
-        pets.push(pet)
-        atualizarBancoDeDados()
-        console.log('Pet adicionado com sucesso.')
-    } else {
-        console.log('Não foi possivel adicionar o pet')
-    }
+const adicionarPet = (novosPet) => {
+    db.pets.push(...novosPet);
+    atualizarBancoDeDados()
+    novosPets.forEach((pet) => {
+        console.log(`${pet.nome} foi adicionado com sucesso!`);
+    })
 }
 
 const darBanhoPet = (pet) => {
@@ -116,3 +105,33 @@ const clientePremium = (pet) => {
 // let dogo = { "nome": "Nicko", "tipo": "Pug", "idade": "1", "raca": "Pug", "peso": 1.8, "tutor": "Odin", "contato": "(81)998677622", "vacinado": false}
 // adicionarPet(dogo)
 // listarPets(pets)
+
+// adicionarPet(
+//     [
+//         {
+//             "nome": "Cavendish",
+//             "tipo": "labrathor",
+//             "idade": "1",
+//             "raca": "labrathor",
+//             "peso": 1.8,
+//             "tutor": "Odin",
+//             "contato": "(81)998677622",
+//             "vacinado": false,
+//             "servicos": []
+//         },
+//         {
+//             "nome": "Thors",
+//             "tipo": "Golden Retriver",
+//             "idade": "2",
+//             "raca": "Golden Retriver",
+//             "peso": 1.8,
+//             "tutor": "Odin",
+//             "contato": "(81)998677622",
+//             "vacinado": false,
+//             "servicos": [
+//                 "banho",
+//                 "tosa"
+//             ]
+//         }
+//     ]
+// ) 
