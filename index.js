@@ -32,11 +32,13 @@ let vacinarPet = (pet) => {
 
 function campanhaVacina(pets) {
     let petsVacinados = 0
-    let vacinados = pets.map(function(pet){
+    pets.map(function(pet){
         if (pet.vacinado) petsVacinados++
     })
     return petsVacinados
 }
+
+console.log(campanhaVacina(pets))
 
 function campanhaVacina2(pets) {
     let vacinados = pets.map(function(pet){
