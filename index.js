@@ -35,7 +35,6 @@ function campanhaVacina(pets) {
     let vacinados = pets.map(function(pet){
         if (pet.vacinado) petsVacinados++
     })
-
     return petsVacinados
 }
 
@@ -92,8 +91,7 @@ const buscarPet = (pets, pet, nome) => {
 }
 
 const clientePremium = (pet) => {
-    let qtdAtendimentos = pet.servicos.length
-    return (qtdAtendimentos >=3) ? true : false
+    return (pet.servicos.length >=3) ? true : false
 }
 
 console.log(clientePremium(pets[0]))
