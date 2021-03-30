@@ -11,12 +11,20 @@ const atualizarBancoDeDados = () => {
     fs.writeFileSync('db-pets.json', petsAtualizado, 'utf-8')
 }
 
+// const listarPets = (pets) => {
+//     (pets).forEach(({nome, tipo, idade, raca}) => {
+//         console.log(`${nome} ${idade} ${tipo} ${raca}`)
+//     });
+// }
+
 const listarPets = (pets) => {
-    for (let pet of pets) {
-        console.log(`${pet.nome} ${pet.idade} ${pet.tipo} ${pet.raca}`)
-        pet.vacinado ? console.log(`${pet.nome} esta vacinado! `) : console.log(`${pet.nome} nao esta vacinado! `)
-    }
+    (pets).forEach((pet) => {
+        let {nome, tipo, idade, raca} = pet
+        console.log(`${nome} ${idade} ${tipo} ${raca}`)
+    });
 }
+
+listarPets(pets)
 
 let vacinarPet = (pet) => {
     if (!pet.vacinado) {
@@ -94,17 +102,15 @@ const clientePremium = (pet) => {
 }
 
 
-console.log(buscarPet(pets, "Billy"))
+//console.log(buscarPet(pets, "Billy"))
 //console.log(campanhaVacina(pets))
 //console.log(clientePremium(pets[0]))
 // console.log(buscarPet(pets, pets[0], 'Billy'))
 // atenderClientes(pets[0], apararUnhasPet(pets[0]))
 
-
 // apararUnhasPet(pets[0])
 // tosarPet(pets[0])
 // darBanhoPet(pets[0])
-
 // listarPets(pets)
 
 // let dogo = { "nome": "Nicko", "tipo": "Pug", "idade": "1", "raca": "Pug", "peso": 1.8, "tutor": "Odin", "contato": "(81)998677622", "vacinado": false}
