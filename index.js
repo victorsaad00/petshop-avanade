@@ -38,8 +38,6 @@ function campanhaVacina(pets) {
     return petsVacinados
 }
 
-console.log(campanhaVacina(pets))
-
 function campanhaVacina2(pets) {
     let vacinados = pets.map(function(pet){
         return pet.vacinado
@@ -85,18 +83,20 @@ function atenderClientes(pet, servico){
     atualizarBancoDeDados()
 }
 
-const buscarPet = (pets, pet, nome) => {
-    let fPet = pets.find((pet)=>{
+const buscarPet = (pets, nome) => {
+    return pets.find((pet)=>{
         return pet.nome === String(nome)
     })
-    return fPet
 }
 
 const clientePremium = (pet) => {
     return (pet.servicos.length >=3) ? true : false
 }
 
-console.log(clientePremium(pets[0]))
+
+console.log(buscarPet(pets, "Billy"))
+//console.log(campanhaVacina(pets))
+//console.log(clientePremium(pets[0]))
 // console.log(buscarPet(pets, pets[0], 'Billy'))
 // atenderClientes(pets[0], apararUnhasPet(pets[0]))
 
